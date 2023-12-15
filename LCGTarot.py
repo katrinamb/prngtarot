@@ -23,8 +23,9 @@ def LCG_tarot(seed):
     random_num = (a * seed + c)%m
     return random_num 
 
-# mod by 22 because there are 22 major arcana tarot cards
+# mod by 44 because there are 22 major arcana tarot cards but also they can all be reversed, totaling to 44
+# time is the seed number
 if __name__ == "__main__":
     for i in range (50):
-        now = LCG_TeamG(now)
-        print (now%22)
+        now = LCG_tarot(now)
+        print (now%44)
